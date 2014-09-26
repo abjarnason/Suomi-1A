@@ -1,0 +1,229 @@
+/* ----------------------------------
+ * Lists
+ * ---------------------------------- */
+
+[data-type="list"] {
+  font-family: "MozTT", "Moz", Sans-serif;
+  font-weight: 400;
+  padding-left: 0.4rem;
+  padding-right: 1.6rem;
+}
+
+[data-type="list"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+[data-type="list"] strong {
+  font-weight: 500;
+}
+
+/* Title divisors */
+[data-type="list"] header {
+  border-bottom: 0.1rem solid #ff4E00;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: normal;
+  color: #ff4E00;
+  text-transform: uppercase;
+}
+
+/* List items */
+[data-type="list"] li {
+  width: 100%;
+  height: 3rem;
+  -moz-box-sizing: border-box;
+  transition: transform 0.3s ease, padding 0.3s ease;
+  border-bottom: solid 0.1rem #dbd9d9;
+  color: #000;
+  margin: 1.5rem 1.5rem;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+[data-type="list"] li:last-child {
+  border: none;
+}
+
+/* Pressed State */
+[data-type="list"] li > a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 6rem;
+  position: relative;
+  border: none;
+  outline: none;
+}
+
+[data-type="list"] li > a:after {
+  content: "";
+  background-color: #b1f1ff;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+[data-type="list"] li > a:active:after {
+  opacity: 0.6;
+  /* Only transition on 'press', not on 'release' */
+  transition: opacity 0.2s ease;
+}
+
+/* Disabled */
+[data-type="list"] li[aria-disabled="true"]:after {
+  content: "";
+  background-color: #e6e6e6;
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+[data-type="list"] li[aria-disabled="true"] {
+  pointer-events: none;
+}
+
+/* Graphic content */
+[data-type="list"] aside {
+  float: left;
+  margin: 0 0.5rem 0 0;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+[data-type="list"] li > a aside,
+[data-type="list"] li > a aside.icon {
+  background-color: transparent;
+  z-index: -1;
+}
+
+[data-type="list"] aside.pack-end {
+  float: right;
+  margin: 0 0 0 0.5rem;
+  text-align: right;
+}
+
+[data-type="list"] aside.icon {
+  width: 3rem;
+  height: 6rem;
+  background: #fff no-repeat left center;
+  font: 0/0 a;
+  display: block;
+  overflow: hidden;
+}
+
+[data-type="list"] aside img {
+  display: block;
+  overflow: hidden;
+  width: 6rem;
+  height: 6rem;
+  background: transparent center center / cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* Checkable content */
+[data-type="list"] li > label {
+  pointer-events: none;
+  position: absolute;
+  top: -0.1rem;
+  bottom: 0;
+  right: 0;
+  left: -4rem;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  border-top: solid 0.1rem #dbd9d9;
+}
+
+[data-type="list"] li > label input + span {
+  left: 0;
+  margin-left: 0;
+}
+
+/* Edit mode */
+[data-type="list"] [data-type="edit"] li {
+  transform: translateX(4rem);
+  padding-left: 0;
+}
+
+[data-type="list"] [data-type="edit"] li > label {
+  pointer-events: auto;
+}
+
+[data-type="list"] [data-type="edit"] li > a:active:after {
+  display: none;
+}
+
+/**
+*   Checkboxes from http://www.csscheckbox.com/checkbox/10390/orange-circle-checkbox/
+*/
+
+input[type=checkbox].css-checkbox {
+    position:absolute;
+    z-index:-1000;
+    top:-1000px;
+    overflow: hidden;
+    height:1px;
+    width:1px;
+    margin:10px;
+    padding-left: 25px;
+    border:0;
+    vertical-align: middle;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:50px;
+    height:24px;
+    display:inline-block;
+    line-height:24px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size: 1.7rem;
+    vertical-align:middle;
+    cursor:pointer;
+    position:relative;
+    font-family: "MozTT", "Moz", Sans-serif;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -24px;
+}
+label.css-label {
+    background-image:url(images/checkbox_orange.png);
+}
+
+/**
+* Other stuff..
+*/
+
+h3 {
+    font-family: "MozTT", "Moz", Sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    padding-left: 3rem;
+}
+
+table {
+    padding-left: 3rem;
+}
+
+tr > td {
+    padding-bottom: 1.2em;
+}

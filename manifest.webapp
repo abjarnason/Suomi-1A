@@ -1,0 +1,13 @@
+{
+  "name": "Suomi 1A",
+  "description": "Basic Finnish vocabulary from the first five chapters of Suomen Mestari 1 (Finnish 1A).",
+  "version": "1.0",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/Finland.png"
+  },
+  "developer": {
+    "name": "Ásgeir Bjarnason",
+    "url": "http://bjarnason.to"
+  }
+}
