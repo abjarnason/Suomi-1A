@@ -195,7 +195,7 @@ input[type=checkbox].css-checkbox + label.css-label {
     line-height:24px;
     background-repeat:no-repeat;
     background-position: 0 0;
-    font-size: 1.7rem;
+    font-size: 2rem;
     vertical-align:middle;
     cursor:pointer;
     position:relative;

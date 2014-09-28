@@ -64,7 +64,7 @@ function refreshWords(kappale){
 	
 	list.innerHTML = '';
 
-	for(var i = 0; i < 5; i++){
+	for(var i = 0; i < 6; i++){
 		var listItem = document.createElement('li');
         listItem.setAttribute("id", 'li_' + i);
         listItem.setAttribute("onclick", "itemClicked(this.id)");
@@ -80,7 +80,6 @@ function itemClicked(id) {
     var clickedItem = document.getElementById(id);
     if (clickedItem.getAttribute("clicked") === "false"){
         clickedItem.innerHTML = clickedItem.innerHTML + ": " + dictionary[document.getElementById(id).innerHTML];
-        clickedItem.setAttribute("clicked", "true");
     }
 }
 
@@ -90,4 +89,6 @@ var btnSettings = document.querySelector("#back-from-result");
 btnSettings.addEventListener ('click', function () {
     viewSettings.classList.remove('move-down');
     viewSettings.classList.add('move-up');
+
+    dictionary = {"yksi": "one", "kaksi": "two", "kolme": "three", "neljä": "four", "viisi": "five", "kuusi": "six", "seitssemän": "seven", "kahdeksan": "eight", "yhdeksän": "nine", "kymmenen": "ten"};
 });
